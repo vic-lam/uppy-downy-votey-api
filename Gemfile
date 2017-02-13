@@ -20,6 +20,8 @@ gem 'puma', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'jwt'     # JSON Web Token
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
