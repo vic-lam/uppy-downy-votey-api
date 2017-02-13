@@ -10,16 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213185304) do
+ActiveRecord::Schema.define(version: 20170213220940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "r_image_url"
-    t.string   "l_image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "poll_options", force: :cascade do |t|
+    t.string   "title"
+    t.string   "body"
+    t.integer  "poll_id"
+    t.integer  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["poll_id"], name: "index_poll_options_on_poll_id", using: :btree
+  end
+
+  create_table "polls", force: :cascade do |t|
+    t.string   "poll_name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_polls_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
