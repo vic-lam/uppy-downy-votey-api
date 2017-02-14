@@ -8,7 +8,6 @@ class Poll < ApplicationRecord
       optionA = PollOption.create(body: params[:poll][:optionA], poll_id: poll.id)
       optionB = PollOption.create(body: params[:poll][:optionB], poll_id: poll.id)
     end
-    binding.pry
     poll
   end
 end

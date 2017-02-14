@@ -4,6 +4,11 @@ class Api::V1::PollsController < ApplicationController
     render json: @poll
   end
 
+  def index
+    @polls = Poll.all
+    render json: @polls
+  end
+
   # private
   #
   # def user_params

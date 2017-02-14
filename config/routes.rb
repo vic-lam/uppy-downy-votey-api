@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'signup', to: 'users#create'
       post 'polls', to: 'polls#create'
+      get 'polls', to: 'polls#index'
     end
   end
 end
