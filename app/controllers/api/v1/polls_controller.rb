@@ -1,7 +1,7 @@
 class Api::V1::PollsController < ApplicationController
   def create
     @poll = Poll.new_with_options(params)
-    @poll.user = current_user
+    @poll.user = active_user
     render json: @poll
   end
 

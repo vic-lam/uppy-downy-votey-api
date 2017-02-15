@@ -1,6 +1,7 @@
 class Poll < ApplicationRecord
   belongs_to :user
   has_many :poll_options
+  has_many :votes, through: :poll_options
 
   def self.new_with_options(params)
     poll = Poll.new(title: params[:poll][:title], user_id: 1)
