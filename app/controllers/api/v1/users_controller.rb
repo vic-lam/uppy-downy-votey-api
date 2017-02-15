@@ -5,7 +5,17 @@ class Api::V1::UsersController < ApplicationController
       jwt = Auth.encrypt({user_id: @user.id})
       render json: {
         jwt: jwt,
-        name: @user.name
+        user: @user
+      }
+    end
+  end
+
+  def login
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
+      jwt = Auth.encrypt({user_id: @user.id})
+      render json: {
+        jwt: jwt
       }
     end
   end
