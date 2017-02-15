@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post 'polls', to: 'polls#create'
       get 'polls', to: 'polls#index'
       post 'votes', to: 'votes#create'
+      get 'users', to: 'users#show'
     end
   end
 end
