@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post 'login', to: 'users#login'
       post 'polls', to: 'polls#create'
       get 'polls', to: 'polls#index'
+      post 'votes', to: 'votes#create'
     end
   end
 end
