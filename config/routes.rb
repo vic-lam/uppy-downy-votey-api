@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'polls', to: 'polls#index'
       post 'votes', to: 'votes#create'
       get 'votes', to: 'votes#index'
+      patch 'polls', to: 'polls#update'
     end
   end
 end
