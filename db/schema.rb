@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20170215154751) do
   enable_extension "plpgsql"
 
   create_table "poll_options", force: :cascade do |t|
-    t.string   "body"
+    t.string   "text",       default: " "
+    t.string   "image",      default: "https://s-media-cache-ak0.pinimg.com/236x/63/43/9b/63439b05d58531785d61655c99907d10.jpg"
     t.integer  "poll_id"
-    t.integer  "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                                                                                     null: false
+    t.datetime "updated_at",                                                                                                     null: false
     t.index ["poll_id"], name: "index_poll_options_on_poll_id", using: :btree
   end
 

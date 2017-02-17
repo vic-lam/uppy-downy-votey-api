@@ -1,4 +1,4 @@
 class PollOptionSerializer < ActiveModel::Serializer
-  attributes :id, :body
+  attributes :id, :text, :image
   has_many :votes
 end
