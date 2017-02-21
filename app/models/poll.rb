@@ -4,7 +4,7 @@ class Poll < ApplicationRecord
   has_many :votes, through: :poll_options
 
   def self.new_with_options(params)
-    poll = Poll.new(title: params[:poll][:title], user_id: 1)
+    poll = Poll.new(title: params[:poll][:title], user_id: params[:poll][:user_id])
     if poll.save
       optionA = PollOption.create(text: params[:poll][:optionAtext], poll_id: poll.id, image: params[:poll][:optionAimage])
       optionB = PollOption.create(text: params[:poll][:optionBtext], poll_id: poll.id, image: params[:poll][:optionBimage])
