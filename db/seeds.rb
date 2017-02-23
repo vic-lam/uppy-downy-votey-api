@@ -31,6 +31,11 @@ Poll.create(title: 'which weighs more?', user_id: '2')
 Poll.create(title: 'Who will win?', user_id: '2')
 Poll.create(title: 'Which reins supreme!?', user_id: '1')
 Poll.create(title: 'Better name', user_id: '3')
+Poll.create(title: "What is the best name for a kitty?", user_id: '3')
+Poll.create(title: "Where to go on my honeymoon?", user_id: '3')
+Poll.create(title: "Wine or beer?",, user_id: '2')
+Poll.create(title: "sexiest nerd",, user_id: '2')
+
 
 poll1_1 = PollOption.create(text: 'Pups', poll_id: '1', image: "https://s-media-cache-ak0.pinimg.com/236x/63/43/9b/63439b05d58531785d61655c99907d10.jpg")
 poll1_2 = PollOption.create(text: 'Rainbow', poll_id: '1', image: "https://media.mnn.com/assets/images/2016/07/Rainbow-Stretching-Hilly-Forest-Mountains.jpg.638x0_q80_crop-smart.jpg")
@@ -74,6 +79,14 @@ PollOption.create(text: 'Unstoppable Force', poll_id: '20', image: "http://a.esp
 PollOption.create(text: 'Immovable Object', poll_id: '20', image: "http://www.towntalk.co.uk/subdomains/lib/image.php/27007_immovable-roadblock-closes-kendray-street.jpg?image=http://www.barnsley.towntalk.co.uk/images_folder/newsimg/27007_immovable-roadblock-closes-kendray-street.jpg&domain=.co.uk")
 PollOption.create(text: 'Orca', poll_id: '21', image: "http://www.defenders.org/sites/default/files/magaizine-spring-2016-orca-dave-ellifrit-center-for-whale-research-nmfs-permit-15569-dfo-sara-272_.jpg")
 PollOption.create(text: 'SeaPanda', poll_id: '21', image: "http://mediacdn.snorgcontent.com/media/catalog/product/cache/1/image/1800x/6b9ffbf72458f4fd2d3cb995d92e8889/s/e/sea-panda-newthumb.png")
+PollOption.create(text: "Elaine (aka Lainey)", poll_id: '22', image: "http://cdn1-www.cattime.com/assets/uploads/gallery/persian-cats-and-kittens/persian-cats-and-kittens-8.jpg")
+PollOption.create(text: "Mooskers", poll_id: '22', image: "http://www.catbreedslist.com/uploads/allimg/cat-pictures/British-Shorthair-1.jpg")
+PollOption.create(text: "Peru", poll_id: '23', image: "http://www.machupicchu.org/img/top/top-destinations-machu-picchu-1.jpg")
+PollOption.create(text: "Italy Ooh La La", poll_id: '23', image: "http://fullwonders.com/wp-content/uploads/2016/10/portofino-italia.jpg")
+PollOption.create(text: "Wine", poll_id: '24', image: "http://punchdrink.com/wp-content/uploads/2016/03/Article-Second-Cheapest-Wine-By-the-Glass-Restaurant-Dining-NYC-Gramercy-Tavern-Juliette-Pope-David-Lynch-Jose-Andres.jpg")
+PollOption.create(text: "Beer", poll_id: '24', image: "https://rks-inside-prod.s3-us-west-1.amazonaws.com/lists/avatars/000/000/047/original_o-PINT-GLASS-BEER-facebook.jpg?1473216955")
+PollOption.create(text: "Bill gates", poll_id: '25', image: "http://ncmedia.azureedge.net/ncmedia/2014/09/billg1_print.jpg")
+PollOption.create(text: "elon musk", poll_id: '25', image: "http://az616578.vo.msecnd.net/files/2016/07/02/636030757259556361-1129479309_elon-musk.jpg")
 
 
 vote1_p1 = Vote.create(poll_option_id: '1', user_id: '1')
