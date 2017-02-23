@@ -33,8 +33,8 @@ Poll.create(title: 'Which reins supreme!?', user_id: '1')
 Poll.create(title: 'Better name', user_id: '3')
 Poll.create(title: "What is the best name for a kitty?", user_id: '3')
 Poll.create(title: "Where to go on my honeymoon?", user_id: '3')
-Poll.create(title: "Wine or beer?",, user_id: '2')
-Poll.create(title: "sexiest nerd",, user_id: '2')
+Poll.create(title: "Wine or beer?", user_id: '2')
+Poll.create(title: "sexiest nerd", user_id: '2')
 
 
 poll1_1 = PollOption.create(text: 'Pups', poll_id: '1', image: "https://s-media-cache-ak0.pinimg.com/236x/63/43/9b/63439b05d58531785d61655c99907d10.jpg")
